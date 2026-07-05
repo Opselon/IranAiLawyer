@@ -1,0 +1,13 @@
+{
+  "name": "vakil-ai",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Vakil.AI - Intelligent Legal Assistant Platform on Cloudflare Edge",
+  "main": "src/worker.js",
+  "scripts": {
+    "test": "node scripts/verify_edge.js"
+  },
+  "dependencies": {
+    "itty-router": "^4.0.23"
+  }
+}

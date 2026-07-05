@@ -1,0 +1,45 @@
+
+ ⛅️ wrangler 4.107.0
+────────────────────
+Your Worker has access to the following bindings:
+Binding                                                    Resource                  Mode
+env.CACHE_KV (00000000000000000000000000000000)            KV Namespace              local
+env.DB (vakil_ai_db)                                       D1 Database               local
+env.X_POWERED_BY ("Vakil.AI/1.0")                          Environment Variable      local
+env.PRIMARY_DOMAIN ("law.webiyar.com")                     Environment Variable      local
+
+⎔ Starting local server...
+[wrangler:info] Ready on http://localhost:8787
+[wrangler:info] HEAD / 404 Not Found (6ms)
+[wrangler:info] GET / 200 OK (6ms)
+[wrangler:info] GET / 200 OK (5ms)
+[wrangler:info] GET /blog 200 OK (4ms)
+[wrangler:info] GET /knowledge 200 OK (4ms)
+Your Worker has access to the following bindings:
+Binding                                                    Resource                  Mode
+env.LIMITER (00000000000000000000000000000000)             KV Namespace              local
+env.CACHE_KV (00000000000000000000000000000001)            KV Namespace              local
+env.DB (vakil_ai_db)                                       D1 Database               local
+env.X_POWERED_BY ("Vakil.AI/1.0")                          Environment Variable      local
+env.PRIMARY_DOMAIN ("law.webiyar.com")                     Environment Variable      local
+env.JWT_SECRET ("super-secret-key-vakil-ai")               Environment Variable      local
+
+⎔ Reloading local server...
+⎔ Local server updated and ready
+⎔ Reloading local server...
+⎔ Local server updated and ready
+[wrangler:info] GET /admin/seed 200 OK (37ms)
+[wrangler:info] GET /blog 200 OK (20ms)
+[wrangler:info] GET /knowledge 200 OK (17ms)
+[wrangler:info] GET /blog/future-of-law 200 OK (12ms)
+[wrangler:info] HEAD /dashboard 404 Not Found (8ms)
+[wrangler:info] HEAD /dashboard 404 Not Found (14ms)
+⎔ Reloading local server...
+⎔ Local server updated and ready
+⎔ Reloading local server...
+⎔ Local server updated and ready
+⎔ Reloading local server...
+⎔ Local server updated and ready
+[wrangler:info] GET / 200 OK (37ms)
+[wrangler:info] GET /blog 200 OK (11ms)
+[wrangler:info] GET /knowledge 200 OK (11ms)
