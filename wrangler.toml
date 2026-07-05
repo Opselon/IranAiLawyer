@@ -1,0 +1,21 @@
+name = "vakil-ai"
+main = "src/worker.js"
+compatibility_date = "2024-03-01"
+
+[vars]
+X_POWERED_BY = "Vakil.AI/1.0"
+PRIMARY_DOMAIN = "law.webiyar.com"
+JWT_SECRET = "super-secret-key-vakil-ai"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "vakil_ai_db"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+[[kv_namespaces]]
+binding = "LIMITER"
+id = "00000000000000000000000000000000"
+
+[[kv_namespaces]]
+binding = "CACHE_KV"
+id = "00000000000000000000000000000001"
