@@ -154,4 +154,47 @@ Vakil.AI INTELLIGENT LEGAL SYSTEM
 
 حریم خصوصی قوانین و مقررات Design by Webiyar دکمه CTA بزرگ‌تر و واضح‌تر (افزایش کلیک ورودی تلگرام). حذف سایه‌های زیاد و افکت‌های سنگین که CLS ایجاد می‌کنند. ساده‌سازی کارت‌ها و افزایش کنتراست. اضافه شدن micro-interactions سبک و بدون افت سرعت. بهتر شدن سلسله‌مراتب تیترها برای مشاهده سریع Scannability.
 
-شروع کن و قوی ترین معماری Cloudflare Worker Edge رو پیاده سازی کن در مرحله اخر تست بگیر Holyweight کامل سایت و سپس کد هارو بده
+---
+
+## 🛠 Technical Implementation & Getting Started
+
+این پروژه بر بستر **Cloudflare Workers** و با استفاده از **D1 Database** و **KV** پیاده‌سازی شده است.
+
+### پیش‌نیازها
+- Node.js v20+
+- Wrangler CLI (`npm install -g wrangler`)
+
+### نحوه راه‌اندازی و اجرا
+
+۱. **نصب وابستگی‌ها:**
+   ```bash
+   npm install
+   ```
+
+۲. **آماده‌سازی پایگاه داده (D1):**
+   ابتدا دیتابیس را در محیط محلی ایجاد و جداول را مستقر کنید:
+   ```bash
+   npx wrangler d1 execute vakil_ai_db --local --file=sql/schema.sql
+   ```
+
+۳. **اجرای سرور توسعه:**
+   ```bash
+   npx wrangler dev
+   ```
+
+۴. **مقداردهی اولیه داده‌ها (Seed):**
+   برای بارگذاری پست‌های بلاگ و تنظیمات اولیه، به مسیر زیر بروید (با استفاده از توکن امنیتی):
+   ```bash
+   curl -H "Authorization: Bearer super-secret-key-vakil-ai" http://localhost:8787/admin/seed
+   ```
+
+۵. **اجرای تست‌ها:**
+   ```bash
+   npm test
+   ```
+
+### ساختار پوشه‌بندی
+- `src/worker.js`: هسته اصلی منطق Edge و روتینگ.
+- `sql/schema.sql`: تعاریف جداول دیتابیس D1.
+- `scripts/`: اسکریپت‌های تاییدیه و تست خودکار.
+- `wrangler.toml`: پیکربندی محیط Cloudflare.
